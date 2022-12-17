@@ -29,5 +29,5 @@ if __name__ == "__main__":
     print("Starting Python Flask server ...")
     util.load_saved_artifacts()
     app.debug = True
-    app.run()
+    app.run(debug = False, host='0.0.0.0')
     app.run(debug=True)
