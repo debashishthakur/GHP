@@ -22,12 +22,12 @@ def predict_home_price():
             'estimated_price' : util.get_estimated_price(location, total_sqft, bhk, bath)
         })
             
-        response.headers.add('Access-Control-Allow-Origin', '*')
+        response.headers.add('Access-Cotrol-Allow-Origin', '*')
         return response
 
 if __name__ == "__main__":
     print("Starting Python Flask server ...")
     util.load_saved_artifacts()
     app.debug = True
-    app.run(debug = False, host='0.0.0.0')
-    #app.run(debug=True)
+    app.run()
+    app.run(debug=True)
